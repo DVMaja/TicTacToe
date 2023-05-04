@@ -1,5 +1,7 @@
 import Jatekter from "./Jatekter.js";
 
-$(function () {
+$(function () {  
+  //program belépési pontja a main.js
   new Jatekter();
+  //itt példányosítja a Jatekter()-t
 });

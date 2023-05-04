@@ -3,16 +3,17 @@ class Elem {
     this.index = index;
     //this.divElem = divElem;
     //this.pElem = pElem;
-    console.log(this.index);
+    //console.log(this.index);
     //lesz még egy onCLick is
-    console.log(szuloElem);
+    //console.log(szuloElem);
     szuloElem.append(`<div class="divElem"><p class="pElem"> </p></div>`);
 
     this.pElem = $("article .divElem:last-child p");
     this.divElem = $("article .divElem:last-child");
     //console.log(this.pElem);
-
+    
     this.divElem.on("click", () => {
+
       //this.setElem.text("X");
       this.esemenyTrigger();
     });
@@ -24,8 +25,9 @@ class Elem {
 
   //saját esemény létrehozása
   //https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
-
+//létrehoz egy saját eseményt
   esemenyTrigger() {
+    //hogy tudjuk melyik az aktuális elemünk a Játéktérben
     const esemeny = new CustomEvent("elemKattintas", { detail: this });
     window.dispatchEvent(esemeny);
   }
