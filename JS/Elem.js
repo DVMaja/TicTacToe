@@ -26,8 +26,8 @@ class Elem {
   //https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent
 
   esemenyTrigger() {
-    const esemeny = new CustomEvent("elemKattintas", {detail: this});    
-    window.dispatchEvent(esemeny);   
+    const esemeny = new CustomEvent("elemKattintas", { detail: this });
+    window.dispatchEvent(esemeny);
   }
 }
 
